@@ -2,10 +2,6 @@ from screen_brightness_control import get_brightness, set_brightness, list_monit
 from pynput import keyboard
 from sys import exit
 
-
-brightnessList = [0, 1, 2, 3, 4, 5, 6, 7, 9, 11, 13, 14, 16, 18, 21, 24, 27, 31, 34, 37, 42, 46, 53, 58, 64, 72, 79, 87, 100]
-init()
-
 def init():
     displayCount = len(list_monitors_info())
     displaySelected = 0
@@ -43,6 +39,9 @@ def displayIndexDecrease():
 
 def quit():
     exit()
+
+brightnessList = [0, 1, 2, 3, 4, 5, 6, 7, 9, 11, 13, 14, 16, 18, 21, 24, 27, 31, 34, 37, 42, 46, 53, 58, 64, 72, 79, 87, 100]
+init()
 
 with keyboard.GlobalHotKeys({
         '<ctrl>+<up>'   : brightnessIncrease,
