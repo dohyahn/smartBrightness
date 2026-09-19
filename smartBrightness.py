@@ -21,7 +21,6 @@ def initialize():
 initialize()
 
 def brightnessIncrease():
-    global displayBrightnessList
     for brightness in brightnessList:
         if displayBrightnessList[displaySelected] < brightness:
             set_brightness(brightness, display=displaySelected)
@@ -30,7 +29,6 @@ def brightnessIncrease():
             break
 
 def brightnessDecrease():
-    global displayBrightnessList
     for brightness in reversed(brightnessList):
         if displayBrightnessList[displaySelected] > brightness:
             set_brightness(brightness, display=displaySelected)
