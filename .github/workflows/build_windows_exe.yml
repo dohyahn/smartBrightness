@@ -29,10 +29,10 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --name MyApp main.py
+          pyinstaller -w -F -i "icon.ico" -n "Smart Brightness" smartBrightness.py
 
       - name: Upload EXE
         uses: actions/upload-artifact@v7
         with:
-          name: MyApp-Windows
-          path: dist/MyApp.exe
+          name: Smart Brightness
+          path: dist/Smart Brightness.exe
