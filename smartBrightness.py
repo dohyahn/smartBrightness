@@ -16,7 +16,8 @@ def initialize():
     displayBrightnessList = list()
     for display in range(displayCount):
         displayBrightnessList.append(get_brightness()[display])
-
+    print('initialized')
+    
 initialize()
 
 def brightnessIncrease():
@@ -48,6 +49,7 @@ def displayIndexDecrease():
     print('display set to : ', displaySelected)
 
 def quit():
+    print('quit')
     exit()
 
 with keyboard.GlobalHotKeys({
